@@ -1,18 +1,24 @@
+/*--------------
+    Hero Section
+--------------*/
+
 .hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: var(--app-padding);
     position: relative;
+    padding-top: 70px;
+    background-color: var(--bg-color);
 }
 
 .hero img {
-    width: 300px;
+    width: 350px;
     margin-top: 50px;
 }
 
 .hero img:last-child {
-    width: 350px;
+    width: 400px;
     margin-top: -40px;
     margin-right: -40px;
 }
@@ -27,7 +33,130 @@
 }
 
 .hero-content h1 {
-    font-size: 50px;
-    font-weight: 600;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--font-color);
+    line-height: 60px;
+}
+
+.hero-content h1 span {
+    color: var(--secondary-color);
+    font-weight: extra-bold;
+}
+
+/*-------------------------------
+    pupular now section
+--------------------------------*/
+
+.popular-now {
+    padding: var(--app-padding);
+    padding-top: 100px;
+    position: relative;
+    background: linear-gradient(to bottom, var(--bg-color) 80%, white 50%);
+}
+
+.popular-now img.beans {
+    position: absolute;
+    top: -20px;
+    right: 0;
+}
+
+
+.popular-card-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 50px 100px;
+    background-color: #fac887;
+    border-radius: 50px;
+    margin-top: 150px;
+}
+
+.popular-now h1.section-header::after {
+    width: 35%;
+}
+
+.popular-card {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    margin-top: -150px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.popular-card h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--font-color);
+}
+
+.popular-card img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.popular-card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0px 30px;
+}
+
+.popular-card-content h3 {
+    font-size: 20px;
+    color: var(--font-color);
+    margin-bottom: 15px;
+}
+
+.popular-card-content .price {
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+
+/*-------------------------------
+    delivery service section
+--------------------------------*/
+.delivery-service {
+    padding: var(--app-padding);
+    margin-top: 100px;
+}
+
+.delivery-service h1.section-header::after {
+    width: 27%;
+}
+
+.delivery-card-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.delivery-card {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}   
+
+.delivery-card img {
+    width: 90%;
+    border-radius: 20px;
 }
 

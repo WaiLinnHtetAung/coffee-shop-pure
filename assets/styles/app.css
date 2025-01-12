@@ -6,7 +6,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f6eada;
+    height: 2000px;
 }
 
 p {
@@ -21,9 +21,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 :root {
+    --bg-color: #f6eada;
     --primary-color: #6f4c3e;
     --secondary-color: #eb7506;
-    --app-padding: 10px 15%;
+    --app-padding: 0px 15%;
+    --font-color: #2d1308;
 }
 
 .cursor-pointer {
@@ -45,8 +47,47 @@ a.primary-btn {
     transition: .4s ease;
 }
 
+a.primary-btn i {
+    margin-left: 10px;
+    color: #eb7506;
+}
+
 a.primary-btn:hover {
     background-color: var(--secondary-color);
+}
+
+a.primary-btn:hover i {
+    color: #fff;
+}
+
+h1.section-header {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--font-color);
+    margin-bottom: 20px;
+}
+
+h1.section-header::after {
+    content: "";
+    display: block;
+    height: 4px;
+    background-color: var(--secondary-color);
+    margin-left: auto;
+}
+
+.cart-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+}
+
+.cart-wrapper i {
+    color: #fff;
 }
 
 i {
