@@ -1,0 +1,33 @@
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--app-padding);
+    position: relative;
+}
+
+.hero img {
+    width: 300px;
+    margin-top: 50px;
+}
+
+.hero img:last-child {
+    width: 350px;
+    margin-top: -40px;
+    margin-right: -40px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    font-weight: 600;
+}
+

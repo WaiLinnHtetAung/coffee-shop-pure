@@ -1,0 +1,46 @@
+.navbar-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--app-padding);
+}
+
+.logo img {
+    width: 80px;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 7px 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.menu a.active {
+    background: var(--secondary-color);
+    color: #fff; 
+    transform: skew(-20deg); 
+}
+
+.menu a.active span {
+    display: inline-block;
+    transform: skew(20deg);
+}
+
+.menu a:hover {
+    background: var(--secondary-color);
+    color: #fff; 
+    transform: skew(-20deg); 
+}
+
+.menu a:hover span {
+    display: inline-block;
+    transform: skew(20deg);
+}

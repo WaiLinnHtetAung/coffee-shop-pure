@@ -1,0 +1,55 @@
+@import url('navbar.css');
+@import url('home.css');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f6eada;
+}
+
+p {
+    margin: 0px 0px 7px;
+    padding: 0;
+    color: #7c7d80;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #6f4c3e;
+    --secondary-color: #eb7506;
+    --app-padding: 10px 15%;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+a.primary-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    padding: 15px 40px;
+    border-radius: 100px 0px 100px 0px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 13px;
+    transition: .4s ease;
+}
+
+a.primary-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+i {
+    color: var(--primary-color);
+    font-size: 18px;
+}
