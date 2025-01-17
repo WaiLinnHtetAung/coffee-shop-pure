@@ -6,7 +6,6 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    height: 2000px;
 }
 
 p {
@@ -33,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important; 
 }
 
 a.primary-btn {
@@ -58,6 +57,10 @@ a.primary-btn:hover {
 
 a.primary-btn:hover i {
     color: #fff;
+}
+
+.content-wrapper {
+    padding: var(--app-padding) !important;
 }
 
 h1.section-header {
@@ -93,4 +96,53 @@ h1.section-header::after {
 i {
     color: var(--primary-color);
     font-size: 18px;
+    transition: .4s ease;
+    cursor: pointer;
+}
+
+i:hover {
+    color: var(--secondary-color);
+}
+
+.modal-content {
+    background-color: var(--bg-color);
+}
+
+
+.product-card {
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+@media (max-width: 1600px) {
+    .content-wrapper {
+        padding: 0px 9% !important;
+    }
+}
+
+@media (max-width: 1400px) {
+    .content-wrapper {
+        padding: 0px 5% !important;
+    }
+}
+@media (max-width: 1220px) {
+    .content-wrapper {
+        padding: 0px 2% !important;
+    }
+}
+
+@media (max-width: 900px) {
+    a.primary-btn {
+        padding: 10px 25px;
+        border-radius: 100px 0px 100px 0px;
+    }
+
+    h1.section-header {
+        font-size: 23px;
+    }
 }

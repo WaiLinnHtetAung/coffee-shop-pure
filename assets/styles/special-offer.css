@@ -1,0 +1,62 @@
+body {
+    background: var(--bg-color) !important;
+}
+
+.special-offer h1 {
+    padding-top: 50px;
+    text-align: center;
+    font-style: italic;
+}
+
+.special-offer-card {
+    border-radius: 10px;
+    transition: .3s ease;
+    overflow: hidden;
+}
+
+.special-offer-card:hover {
+    transform: scale(1.03);
+}
+
+.special-offer-card img {
+    border-radius: 15px;
+    height: 320px;
+}
+
+.special-offer-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    height: 320px;
+}
+
+.special-offer-card-content h3 {
+    font-size: 20px !important;
+    font-weight: bold;
+}
+
+.special-offer-card-content i {
+    color: var(--secondary-color);
+}
+
+.special-offer-plan-card {
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.special-offer-plan-card button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    transition: .3s ease;
+}
+
+

@@ -1,0 +1,21 @@
+body {
+    background: var(--bg-color) !important;
+}
+
+.shopping-cart h1 {
+    padding-top: 50px;
+    text-align: center;
+    font-style: italic;
+}
+
+.shopping-cart table img {
+    width: 150px;
+    border-radius: 10px;
+}
+
+.shopping-cart .qty-container {
+    border: 1px solid var(--font-color);
+    padding: 10px 15px;
+    border-radius: 15px;
+    width: 130px;
+}

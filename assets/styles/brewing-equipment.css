@@ -1,0 +1,23 @@
+body {
+    background: var(--bg-color) !important;
+}
+
+.brewing-equipment h1 {
+    padding-top: 50px;
+    text-align: center;
+    font-style: italic;
+}
+
+.brewing-equipment-card {
+    padding: 15px;
+    border-radius: 10px;
+    transition: .3s ease;
+}
+
+.brewing-equipment-card:hover {
+    transform: scale(1.03);
+}
+
+.brewing-equipment-card-img img {
+    border-radius: 15px;
+}

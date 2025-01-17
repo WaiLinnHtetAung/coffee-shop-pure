@@ -1,0 +1,23 @@
+body {
+    background: var(--bg-color) !important;
+}
+
+.coffee-selection h1 {
+    padding-top: 50px;
+    text-align: center;
+    font-style: italic;
+}
+
+.selection-card {
+    padding: 15px;
+    border-radius: 10px;
+    transition: .3s ease;
+}
+
+.selection-card:hover {
+    transform: scale(1.03);
+}
+
+.selection-card-img img {
+    border-radius: 15px;
+}

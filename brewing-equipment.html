@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/images/logo.png">
+    <title>Boutique Coffee Shop</title>
+
+    <link rel="stylesheet" href="./assets/styles/app.css">
+    <link rel="stylesheet" href="./assets/styles/brewing-equipment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css" integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+</head>
+<body>
+        <nav class="navbar-wrapper content-wrapper">
+            <div class="logo cursor-pointer" onclick="window.location.href='index.html';">
+                <img src="./assets/images/logo.png" alt="">
+            </div>
+            <div class="menu d-none d-lg-block">
+                <a href="index.html"><span>Home</span></a>
+                <a href="coffee-selection.html"><span>Coffee Selection</span></a>
+                <a href="brewing-equipment.html" class="active"><span>Brewing Equipment</span></a>
+                <a href="event.html"><span>Events</span></a>
+                <a href="shopping-cart.html"><span>Shopping Cart</span></a>
+                <a href="special-offer.html"><span>Special Offers</span></a>
+            </div>
+            <div class="d-flex gap-3 align-items-center ">
+                <div class="d-none d-lg-flex align-items-center gap-2 bg-white py-1 px-3 rounded-pill search-box ">
+                    <i class="fas fa-search"></i>
+                    <input type="text" class="form-control bg-transparent border-0 p-0 py-1" placeholder="Search">
+                </div>
+                <div class="icons d-flex align-items-center gap-3">
+                    <i class="fas fa-shopping-cart cursor-pointer"></i>
+                    <i class="fas fa-user "></i>
+
+                    <!-- moble drawer  -->
+                    <button class="navbar-toggler block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Bean Boutique Coffee Shop</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="coffee-selection.html">Coffee Selection</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="brewing-equipment.html">Brewing Equipment</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="event.html">Events</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="shopping-cart.html">Shopping Cart</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="special-offer.html">Special Offers</a>
+                                </li>
+                            </ul>
+                            <form class="d-flex mt-3">
+                                <input class="form-control me-2 rounded-pill" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-warning" type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="brewing-equipment content-wrapper">
+            <h1>Explore Our Brewing Equipment</h1>
+            <div class="row mt-5">
+                <div class="col-12 col--6 col-md-4 mb-3">
+                    <div class="brewing-equipment-card shadow-lg">
+                        <div class="brewing-equipment-card-img">
+                            <img class="w-100" src="./assets/images/brew-equp1.jpg" alt="">
+                        </div>
+                        <div class="brewing-equipment-card-content mt-2">
+                            <h3>Equpment 1</h3>
+                            <p class="p-0 m-0">Lorem ipsum dolor sit amet, consectetur adipisicing eli Consequatur, voluptatum cumque placeat tempore itaque expedita voluptatem oluptatum cumque placeat tempore itaque expedita voluptatem esse ipsa incidunt. Eum.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col--6 col-md-4 mb-3">
+                    <div class="brewing-equipment-card shadow-lg">
+                        <div class="brewing-equipment-card-img">
+                            <img class="w-100" src="./assets/images/brew-equp2.jpg" alt="">
+                        </div>
+                        <div class="brewing-equipment-card-content mt-2">
+                            <h3>Equpment 2</h3>
+                            <p class="p-0 m-0">Lorem ipsum dolor sit amet, consectetur adipisicing eli Consequatur, voluptatum cumque placeat tempore itaque expedita voluptatem oluptatum cumque placeat tempore itaque expedita voluptatem esse ipsa incidunt. Eum.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col--6 col-md-4 mb-3">
+                    <div class="brewing-equipment-card shadow-lg">
+                        <div class="brewing-equipment-card-img">
+                            <img class="w-100" src="./assets/images/brew-equp3.jpg" alt="">
+                        </div>
+                        <div class="brewing-equipment-card-content mt-2">
+                            <h3>Equpment 3</h3>
+                            <p class="p-0 m-0">Lorem ipsum dolor sit amet, consectetur adipisicing eli Consequatur, voluptatum cumque placeat tempore itaque expedita voluptatem oluptatum cumque placeat tempore itaque expedita voluptatem esse ipsa incidunt. Eum.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col--6 col-md-4 mb-3">
+                    <div class="brewing-equipment-card shadow-lg">
+                        <div class="brewing-equipment-card-img">
+                            <img class="w-100" src="./assets/images/brew-equp1.jpg" alt="">
+                        </div>
+                        <div class="brewing-equipment-card-content mt-2">
+                            <h3>Equpment 4</h3>
+                            <p class="p-0 m-0">Lorem ipsum dolor sit amet, consectetur adipisicing eli Consequatur, voluptatum cumque placeat tempore itaque expedita voluptatem oluptatum cumque placeat tempore itaque expedita voluptatem esse ipsa incidunt. Eum.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col--6 col-md-4 mb-3">
+                    <div class="brewing-equipment-card shadow-lg">
+                        <div class="brewing-equipment-card-img">
+                            <img class="w-100" src="./assets/images/brew-equp2.jpg" alt="">
+                        </div>
+                        <div class="brewing-equipment-card-content mt-2">
+                            <h3>Equpment 5</h3>
+                            <p class="p-0 m-0">Lorem ipsum dolor sit amet, consectetur adipisicing eli Consequatur, voluptatum cumque placeat tempore itaque expedita voluptatem oluptatum cumque placeat tempore itaque expedita voluptatem esse ipsa incidunt. Eum.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col--6 col-md-4 mb-3">
+                    <div class="brewing-equipment-card shadow-lg">
+                        <div class="brewing-equipment-card-img">
+                            <img class="w-100" src="./assets/images/brew-equp3.jpg" alt="">
+                        </div>
+                        <div class="brewing-equipment-card-content mt-2">
+                            <h3>Equpment 6</h3>
+                            <p class="p-0 m-0">Lorem ipsum dolor sit amet, consectetur adipisicing eli Consequatur, voluptatum cumque placeat tempore itaque expedita voluptatem oluptatum cumque placeat tempore itaque expedita voluptatem esse ipsa incidunt. Eum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="content-wrapper pt-4">
+                <div class="row">
+                    <div class="col-12 col--6 col-md-4 col-lg-3 mb-4">
+                        <img class="footer-logo" src="./assets/images/logo.png" alt="">
+                        <p class="footer-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                            Quos, quia.
+                        </p>
+                    </div>
+                    <div class="col-12 col--6 col-md-4 col-lg-3 mb-4">
+                        <h4 class="footer-text mb-4">Menu</h4>
+                        <div class="d-flex flex-column gap-2 footer-menu">
+                            <div class="d-flex flex-column gap-2 footer-menu">
+                                <a class="footer-text text-decoration-underline" href="index.html">Home</a>
+                                <a class="footer-text text-decoration-underline" href="coffee-selection.html">Coffee Selection</a>
+                                <a class="footer-text text-decoration-underline" href="brewing-equipment.html">Brewing Equipment</a>
+                                <a class="footer-text text-decoration-underline" href="event.html">Events</a>
+                                <a class="footer-text text-decoration-underline" href="shopping-cart.html">Shopping Cart</a>
+                                <a class="footer-text text-decoration-underline" href="special-offer.html">Special Offers</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col--6 col-md-4 col-lg-3 mb-4">
+                        <h4 class="footer-text mb-4">Contact Us</h4>
+                        <div class="d-flex align-items-start gap-2 mb-2">
+                            <i class="fas fa-envelope"></i>
+                            <small class="footer-text">example@gmial.com</small>
+                        </div>
+                        <div class="d-flex align-items-start gap-2 mb-2">
+                            <i class="fas fa-phone-square"></i>
+                            <small class="footer-text">+959 - 9999 9999 <br> +959 - 9999 9999</small>
+                        </div>
+                        <div class="d-flex align-items-start gap-2 mb-2">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <small class="footer-text">No. 123, Street, City</small>
+                        </div>
+                    </div>
+                    <div class="col-12 col--6 col-md-4 col-lg-3 mb-4">
+                        <h4 class="footer-text mb-4">Contact Us</h4>
+                        <div class="social">
+                            <div><i class="fab fa-facebook-square"></i></div>
+                            <div><i class="fab fa-facebook-messenger"></i></div>
+                            <div><i class="fab fa-youtube"></i></div>
+                            <div><i class="fab fa-twitter"></i></div>
+                            <div><i class="fab fa-instagram"></i></div>
+                            <div><i class="fas fa-comments"></i></div>
+                            <div><i class="fab fa-telegram"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div>
+                <p class="text-center footer-text p-0 m-0">Copyright &copy; 2022 Boutique Coffee Shop</p>
+            </div>
+         </footer>
+
+    
+
+</body>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</html>

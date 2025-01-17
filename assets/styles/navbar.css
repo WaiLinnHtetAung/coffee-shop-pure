@@ -3,17 +3,13 @@ nav {
     top: 0;
     z-index: 100;
     background-color: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav.shadow {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--app-padding);
 }
 
 .logo img {
@@ -54,4 +50,54 @@ nav.shadow {
 .menu a:hover span {
     display: inline-block;
     transform: skew(20deg);
+}
+
+.offcanvas {
+    background-color: var(--bg-color) !important;
+}
+
+.offcanvas-header h5 {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.offcanvas-body .nav-link {
+    text-decoration: none !important;
+    color: var(--font-color);
+    font-weight: bold;
+}
+
+
+
+@media (max-width: 1400px) {
+    .menu a {
+        padding: 5px 9px;
+    }
+}
+
+@media (max-width: 1220px) {
+
+    .menu a {
+        padding: 4px 7px;
+    }
+
+    .search-box i{
+        font-size: 10px;
+    }
+
+    .search-box input {
+        font-size: 10px;
+        padding: 0;
+    }
+}
+
+@media (max-width: 1060px) {
+    .logo img {
+        width: 60px;
+    }
+
+    .menu a {
+        font-size: 12px;
+        padding: 4px 7px;
+    }
 }

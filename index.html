@@ -3,33 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee Shop</title>
+    <link rel="icon" href="./assets/images/logo.png">
+    <title>Boutique Coffee Shop</title>
 
     <link rel="stylesheet" href="./assets/styles/app.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css" integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 </head>
 <body>
-    <nav>
-        <div class="navbar-wrapper">
-            <div class="logo">
+        <nav class="navbar-wrapper content-wrapper">
+            <div class="logo cursor-pointer" onclick="window.location.href='index.html';">
                 <img src="./assets/images/logo.png" alt="">
             </div>
-            <div class="menu">
-                <a href="#" class="active"><span>Home</span></a>
-                <a href="#"><span>Coffee Selection</span></a>
-                <a href="#"><span>Brewing Equipment</span></a>
-                <a href="#"><span>Events</span></a>
-                <a href="#"><span>Shopping Cart</span></a>
-                <a href="#"><span>Special Offers</span></a>
+            <div class="menu d-none d-lg-block">
+                <a href="index.html" class="active"><span>Home</span></a>
+                <a href="coffee-selection.html"><span>Coffee Selection</span></a>
+                <a href="brewing-equipment.html"><span>Brewing Equipment</span></a>
+                <a href="event.html"><span>Events</span></a>
+                <a href="shopping-cart.html"><span>Shopping Cart</span></a>
+                <a href="special-offer.html"><span>Special Offers</span></a>
             </div>
-            <div class="cart">
-                <i class="fas fa-shopping-cart cursor-pointer"></i>
+            <div class="d-flex gap-3 align-items-center ">
+                <div class="d-none d-lg-flex align-items-center gap-2 bg-white py-1 px-3 rounded-pill search-box ">
+                    <i class="fas fa-search"></i>
+                    <input type="text" class="form-control bg-transparent border-0 p-0 py-1" placeholder="Search">
+                </div>
+                <div class="icons d-flex align-items-center gap-3">
+                    <i class="fas fa-shopping-cart cursor-pointer"></i>
+                    <i class="fas fa-user "></i>
+
+                    <!-- moble drawer  -->
+                    <button class="navbar-toggler block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Bean Boutique Coffee Shop</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="coffee-selection.html">Coffee Selection</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="brewing-equipment.html">Brewing Equipment</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="event.html">Events</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="shopping-cart.html">Shopping Cart</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="special-offer.html">Special Offers</a>
+                                </li>
+                            </ul>
+                            <form class="d-flex mt-3">
+                                <input class="form-control me-2 rounded-pill" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-warning" type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
     <!-- hero section  -->
-    <section class="hero">
+    <section class="hero content-wrapper">
         <img src="./assets/images/seed.png" alt="">
         <div class="hero-content">
             <h1>The best quality <span>coffee</span> beans for the best coffee brew</h1>
@@ -42,7 +92,29 @@
         <img src="./assets/images/cup.png" alt="">
     </section>
 
-    <section class="popular-now">
+    <!-- Modal -->
+    <div class="modal fade" id="welcomeModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header ">
+            <h5 class="modal-title" id="welcomeModalLabel">Welcome</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex flex-column justify-content-center align-items-center pb-5 pt-2">
+                <img class="w-50 mx-auto" src="./assets/images/welcome.png" alt="">
+                <h1 class="fw-bolder my-3">GET 10% OFF</h1>
+                <p>SUBSCRIBE TO OUR NEWSLETTER & GET 10% OFF</p>
+
+                <div class="mt-4 w-100 px-4">
+                    <input type="text" class="form-control w-100 mb-3 rounded text-white" readonly placeholder="Enter Your Email Address Where We Send You 10% off">
+                    <input type="button" class="form-control w-100 modal-btn rounded text-white" style="background: var(--primary-color);" value="GET IT NOW"  onclick="window.location.href='index.html';">
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <section class="popular-now content-wrapper">
         <img class="beans" src="./assets/images/bean.png" alt="">
         <h1 class="section-header">Popular Now</h1>
         <div class="popular-card-wrapper">
@@ -92,28 +164,269 @@
     </section>
 
     <!-- delivery service  -->
-     <section class="delivery-service">
+     <section class="delivery-service content-wrapper">
         <h1 class="section-header">How to use delivery service</h1>
 
         <div class="delivery-card-wrapper">
             <div class="delivery-card">
                 <img src="./assets/images/deli1.png" alt="">
-                <h3>Choose your coffee</h3>
-                <p>there are 20+ coffees for you</p>
+                <h3 class="text-center">Choose your coffee</h3>
+                <p class="text-center">there are 20+ coffees for you</p>
             </div>
             <div class="delivery-card">
                 <img src="./assets/images/deli2.png" alt="">
-                <h3>We deliver it to you</h3>
-                <p>choose delivery service</p>
+                <h3 class="text-center">We deliver it to you</h3>
+                <p class="text-center">choose delivery service</p>
             </div>
             <div class="delivery-card">
                 <img src="./assets/images/deli3.png" alt="">
-                <h3>Enjoy your coffee</h3>
-                <p>hold fresh coffee</p>
+                <h3 class="text-center">Enjoy your coffee</h3>
+                <p class="text-center">hold fresh coffee</p>
             </div>
         </div>
      </section>
 
+     <section class="about-us">
+        <img class="banner" src="./assets/images/coffee-banner.avif" alt="">
+        <div class="content-wrapper">
+            <div class="img-container">
+                <img src="./assets/images/coffee.jpg" alt="">
+            </div>
+
+            <div class="content">
+                <h1 class="section-header">About Us</h1>
+                <h3>We provide quality coffee,</h3>
+                <h3 class="mb-3">and ready to deliver</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam error, nostrum maxime culpa obcaecati ab corrupti quia deserunt impedit commodi!
+                </p>
+                <a href="#" class="primary-btn">Get your coffee</a>
+
+            </div>
+        </div>
+     </section>
+
+     <section class="feature-products content-wrapper">
+        <h1 class="section-header">Feature Products</h1>
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="feature-card">
+                    <img class="feature-img" src="./assets/images/feature1.jpg" alt="">
+                    <div class="content">
+                        <h3>Product 1</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, laboriosam.</p>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="feature-card">
+                    <img class="feature-img" src="./assets/images/feature1.jpg" alt="">
+                    <div class="content">
+                        <h3>Product 1</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, laboriosam.</p>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="feature-card">
+                    <img class="feature-img" src="./assets/images/feature1.jpg" alt="">
+                    <div class="content">
+                        <h3>Product 1</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, laboriosam.</p>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="feature-card">
+                    <img class="feature-img" src="./assets/images/feature1.jpg" alt="">
+                    <div class="content">
+                        <h3>Product 1</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, laboriosam.</p>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="feature-card">
+                    <img class="feature-img" src="./assets/images/feature1.jpg" alt="">
+                    <div class="content">
+                        <h3>Product 1</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, laboriosam.</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          
+          </div>
+     </section>
+
+     <section class="special-menu content-wrapper">
+        <h1 class="section-header">Special menu for you</h1>
+        <div class="row mt-4">
+            <div class="col-12 col-sm-6 col-md-4 mb-3">
+                <div class="product-card shadow-lg">
+                    <div class="product-card-img">
+                        <img src="./assets/images/popular1.jpg" alt="">
+                    </div>
+                    <div class="product-card-content d-flex justify-content-between mt-3">
+                        <div>
+                            <h3>Arabica</h3>
+                            <p class="price">$ 20.00</p>
+                        </div>
+                        <div class="cart-wrapper">
+                            <i class="fas fa-shopping-cart cursor-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 mb-3">
+                <div class="product-card shadow-lg">
+                    <div class="product-card-img">
+                        <img src="./assets/images/popular2.jpg" alt="">
+                    </div>
+                    <div class="product-card-content d-flex justify-content-between mt-3">
+                        <div>
+                            <h3>Arabica</h3>
+                            <p class="price">$ 20.00</p>
+                        </div>
+                        <div class="cart-wrapper">
+                            <i class="fas fa-shopping-cart cursor-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 mb-3">
+                <div class="product-card shadow-lg">
+                    <div class="product-card-img">
+                        <img src="./assets/images/popular3.jpg" alt="">
+                    </div>
+                    <div class="product-card-content d-flex justify-content-between mt-3">
+                        <div>
+                            <h3>Arabica</h3>
+                            <p class="price">$ 20.00</p>
+                        </div>
+                        <div class="cart-wrapper">
+                            <i class="fas fa-shopping-cart cursor-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 mb-3">
+                <div class="product-card shadow-lg">
+                    <div class="product-card-img">
+                        <img src="./assets/images/popular1.jpg" alt="">
+                    </div>
+                    <div class="product-card-content d-flex justify-content-between mt-3">
+                        <div>
+                            <h3>Arabica</h3>
+                            <p class="price">$ 20.00</p>
+                        </div>
+                        <div class="cart-wrapper">
+                            <i class="fas fa-shopping-cart cursor-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 mb-3">
+                <div class="product-card shadow-lg">
+                    <div class="product-card-img">
+                        <img src="./assets/images/popular2.jpg" alt="">
+                    </div>
+                    <div class="product-card-content d-flex justify-content-between mt-3">
+                        <div>
+                            <h3>Arabica</h3>
+                            <p class="price">$ 20.00</p>
+                        </div>
+                        <div class="cart-wrapper">
+                            <i class="fas fa-shopping-cart cursor-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 mb-3">
+                <div class="product-card shadow-lg">
+                    <div class="product-card-img">
+                        <img src="./assets/images/popular3.jpg" alt="">
+                    </div>
+                    <div class="product-card-content d-flex justify-content-between mt-3">
+                        <div>
+                            <h3>Arabica</h3>
+                            <p class="price">$ 20.00</p>
+                        </div>
+                        <div class="cart-wrapper">
+                            <i class="fas fa-shopping-cart cursor-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <footer>
+        <div class="content-wrapper pt-4">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <img class="footer-logo" src="./assets/images/logo.png" alt="">
+                    <p class="footer-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                        Quos, quia.
+                    </p>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <h4 class="footer-text mb-4">Menu</h4>
+                    <div class="d-flex flex-column gap-2 footer-menu">
+                        <a class="footer-text text-decoration-underline" href="#">Home</a>
+                        <a class="footer-text text-decoration-underline" href="coffee-selection.html">Coffee Selection</a>
+                        <a class="footer-text text-decoration-underline" href="brewing-equipment.html">Brewing Equipment</a>
+                        <a class="footer-text text-decoration-underline" href="event.html">Events</a>
+                        <a class="footer-text text-decoration-underline" href="shopping-cart.html">Shopping Cart</a>
+                        <a class="footer-text text-decoration-underline" href="special-offer.html">Special Offers</a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <h4 class="footer-text mb-4">Contact Us</h4>
+                    <div class="d-flex align-items-start gap-2 mb-2">
+                        <i class="fas fa-envelope"></i>
+                        <small class="footer-text">example@gmial.com</small>
+                    </div>
+                    <div class="d-flex align-items-start gap-2 mb-2">
+                        <i class="fas fa-phone-square"></i>
+                        <small class="footer-text">+959 - 9999 9999 <br> +959 - 9999 9999</small>
+                    </div>
+                    <div class="d-flex align-items-start gap-2 mb-2">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <small class="footer-text">No. 123, Street, City</small>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <h4 class="footer-text mb-4">Contact Us</h4>
+                    <div class="social">
+                        <div><i class="fab fa-facebook-square"></i></div>
+                        <div><i class="fab fa-facebook-messenger"></i></div>
+                        <div><i class="fab fa-youtube"></i></div>
+                        <div><i class="fab fa-twitter"></i></div>
+                        <div><i class="fab fa-instagram"></i></div>
+                        <div><i class="fas fa-comments"></i></div>
+                        <div><i class="fab fa-telegram"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div>
+            <p class="text-center footer-text p-0 m-0">Copyright &copy; 2022 Boutique Coffee Shop</p>
+        </div>
+     </footer>
+
 </body>
+    <script src="./assets/js/jquery.js"></script>
     <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/modal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </html>

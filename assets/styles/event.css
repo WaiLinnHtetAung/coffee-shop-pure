@@ -1,0 +1,41 @@
+body {
+    background: var(--bg-color) !important;
+}
+
+.event h1 {
+    padding-top: 50px;
+    text-align: center;
+    font-style: italic;
+}
+
+.event-card {
+    padding: 15px;
+    border-radius: 10px;
+    transition: .3s ease;
+}
+
+.event-card:hover {
+    transform: scale(1.03);
+}
+
+.event-card-img img {
+    border-radius: 15px;
+    height: 250px;
+}
+
+.event-card-content h3 {
+    font-size: 20px !important;
+    font-weight: bold;
+}
+
+
+.event-card .event-date i {
+    font-size: 18px;
+    color: var(--secondary-color) !important;
+}
+
+.event-card .event-date span {
+    font-size: 16px;
+    font-weight: bold;
+    color: gray;
+}
